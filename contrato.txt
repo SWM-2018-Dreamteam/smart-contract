@@ -1,0 +1,19 @@
+pragma solidity ^0.4.19;
+
+contract ReservationContract {
+   
+   string cryptokey;
+   string data_i;
+   string data_f;   
+
+   constructor(string _cryptokey, string _data_i, string _data_f) public {
+       cryptokey = _cryptokey;
+       data_i = _data_i;
+       data_f = _data_f;
+   }
+
+   function getCredentials() public view returns(string, string, string) {
+      return (cryptokey, data_i, data_f);
+   }
+
+}
